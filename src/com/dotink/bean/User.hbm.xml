@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.dotink.bean">
+
+	<class name="User" table="user">
+		<id name="user_ID" column="user_ID">
+			<generator class="native"></generator>
+		</id>
+		<property name="user_name"></property>
+		<property name="user_password"></property>
+		<property name="user_account" ></property>
+        <property name="user_joindate" ></property>
+        <property name="user_gender" ></property>
+        <property name="user_describe" ></property>
+        <property name="user_question"></property>
+          <property name="user_result"></property>
+         <property name="user_other" ></property>
+       
+          <many-to-one name="duty" class="Duty" column="duty_id"  lazy="false"></many-to-one>
+          
+		 
+		</class>
+
+</hibernate-mapping>

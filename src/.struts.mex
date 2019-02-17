@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Struts2Diagram version="2.0">
+  <package name="default" location="1060,165" size="1470,2310">
+    <action name="member*" location="0,0" size="0,0">
+      <result name="member_index">
+        <resourceEdge source="member_index" routing="0" target="member_index.jsp" />
+      </result>
+      <result name="member_new">
+        <resourceEdge source="member_new" routing="0" target="member_new.jsp" />
+      </result>
+      <result name="member_update">
+        <resourceEdge source="member_update" routing="0" target="member_update.jsp" />
+      </result>
+      <result name="member_search">
+        <resourceEdge source="member_search" routing="0" target="member_search.jsp" />
+      </result>
+      <result name="goindexmember" />
+      <result name="goupdateuser" />
+      <result name="updatesuccess" />
+    </action>
+    <action name="community*" location="0,0" size="0,0">
+      <result name="community_index">
+        <resourceEdge source="community_index" routing="0" target="community_index.jsp" />
+      </result>
+      <result name="community_new">
+        <resourceEdge source="community_new" routing="0" target="community_new.jsp" />
+      </result>
+      <result name="community_search">
+        <resourceEdge source="community_search" routing="0" target="community_search.jsp" />
+      </result>
+      <result name="community_update">
+        <resourceEdge source="community_update" routing="0" target="community_update.jsp" />
+      </result>
+      <result name="goindexcommunity" />
+      <result name="goupdateuser" />
+    </action>
+    <action name="activity*" location="0,0" size="0,0">
+      <result name="activity_index">
+        <resourceEdge source="activity_index" routing="0" target="activity_index.jsp" />
+      </result>
+      <result name="activity_new">
+        <resourceEdge source="activity_new" routing="0" target="activity_new.jsp" />
+      </result>
+      <result name="activity_search">
+        <resourceEdge source="activity_search" routing="0" target="activity_search.jsp" />
+      </result>
+      <result name="activity_update">
+        <resourceEdge source="activity_update" routing="0" target="activity_update.jsp" />
+      </result>
+      <result name="goindexactivity" />
+    </action>
+    <action name="funds*" location="0,0" size="0,0">
+      <result name="funds_index">
+        <resourceEdge source="funds_index" routing="0" target="funds_index.jsp" />
+      </result>
+      <result name="funds_new">
+        <resourceEdge source="funds_new" routing="0" target="funds_new.jsp" />
+      </result>
+      <result name="funds_search">
+        <resourceEdge source="funds_search" routing="0" target="funds_search.jsp" />
+      </result>
+      <result name="funds_update">
+        <resourceEdge source="funds_update" routing="0" target="funds_update.jsp" />
+      </result>
+      <result name="goindexfunds" />
+      <result name="approve_index">
+        <resourceEdge source="approve_index" routing="0" target="approve_index.jsp" />
+      </result>
+    </action>
+    <action name="user*" location="485,610" size="150,125">
+      <result name="login">
+        <resourceEdge source="login" routing="0" target="login.jsp" />
+      </result>
+      <result name="error">
+        <resourceEdge source="error" routing="0" target="login.jsp" />
+      </result>
+      <result name="personalMessage">
+        <resourceEdge source="personalMessage" routing="0" target="personalMessage.jsp" />
+      </result>
+      <result name="main">
+        <resourceEdge source="main" routing="0" target="main.jsp" />
+      </result>
+      <result name="register">
+        <resourceEdge source="register" routing="0" target="register.jsp" />
+      </result>
+    </action>
+  </package>
+  <webResource name="projectitem.jsp" path="/projectitem.jsp" location="2577,290" size="150,55" />
+  <webResource name="newproject.jsp" path="/newproject.jsp" location="2298,10" size="150,55" />
+  <webResource name="newbug.jsp" path="/newbug.jsp" location="2445,2670" size="150,55" />
+  <webResource name="projectbug.jsp" path="/projectbug.jsp" location="58,430" size="150,55" />
+  <webResource name="projectinfo.jsp" path="/projectinfo.jsp" location="899,535" size="150,55" />
+  <webResource name="buginfo.jsp" path="/buginfo.jsp" location="1990,2530" size="150,55" />
+  <webResource name="mybug.jsp" path="/mybug.jsp" location="2165,2530" size="150,55" />
+  <webResource name="projecttask.jsp" path="/projecttask.jsp" location="1808,2530" size="150,55" />
+  <webResource name="login.jsp" path="/login.jsp" location="170,780" size="150,55" />
+  <webResource name="personalMessage.jsp" path="/personalOperate/personalMessage.jsp" location="511,990" size="150,55" />
+  <webResource name="main.jsp" path="/main.jsp" location="345,885" size="150,55" />
+  <webResource name="register.jsp" path="/register.jsp" location="1570,2530" size="150,55" />
+  <webResource name="AddTeam.jsp" path="/projectTeam/AddTeam.jsp" location="828,1935" size="150,55" />
+  <webResource name="createManager.jsp" path="/adminOperate/createManager.jsp" location="771,2110" size="150,55" />
+  <webResource name="projectSuite.jsp" path="/projectTeam/projectSuite.jsp" location="822,2285" size="150,55" />
+  <webResource name="projectdocList.jsp" path="/doc/projectdocList.jsp" location="841,1095" size="150,55" />
+  <webResource name="projectdocDetail.jsp" path="/doc/projectdocDetail.jsp" location="834,1270" size="150,55" />
+  <webResource name="projectdocNew.jsp" path="/doc/projectdocNew.jsp" location="837,1445" size="150,55" />
+  <webResource name="personDoc.jsp" path="/doc/personDoc.jsp" location="885,1620" size="150,55" />
+  <webResource name="member.jsp" path="/member.jsp" location="0,0" size="0,0" />
+  <webResource name="member_add.jsp" path="/member_add.jsp" location="0,0" size="0,0" />
+  <webResource name="newmember.jsp" path="/newmember.jsp" location="0,0" size="0,0" />
+  <webResource name="updatemember.jsp" path="/updatemember.jsp" location="0,0" size="0,0" />
+  <webResource name="community_index.jsp" path="/community_index.jsp" location="0,0" size="0,0" />
+  <webResource name="community_create.jsp" path="/community_create.jsp" location="0,0" size="0,0" />
+  <webResource name="community_update.jsp" path="/community_update.jsp" location="0,0" size="0,0" />
+  <webResource name="community_new.jsp" path="/community_new.jsp" location="0,0" size="0,0" />
+  <webResource name="activity_index.jsp" path="/activity_index.jsp" location="0,0" size="0,0" />
+  <webResource name="activity_new.jsp" path="/activity_new.jsp" location="0,0" size="0,0" />
+  <webResource name="activity_update.jsp" path="/activity_update.jsp" location="0,0" size="0,0" />
+  <webResource name="funds_index.jsp" path="/funds_index.jsp" location="0,0" size="0,0" />
+  <webResource name="funds_new.jsp" path="/funds_new.jsp" location="0,0" size="0,0" />
+  <webResource name="funds_update.jsp" path="/funds_update.jsp" location="0,0" size="0,0" />
+  <webResource name="member_index.jsp" path="/member_index.jsp" location="0,0" size="0,0" />
+  <webResource name="member_new.jsp" path="/member_new.jsp" location="0,0" size="0,0" />
+  <webResource name="member_update.jsp" path="/member_update.jsp" location="0,0" size="0,0" />
+  <webResource name="member_search.jsp" path="/member_search.jsp" location="0,0" size="0,0" />
+  <webResource name="community_search.jsp" path="/community_search.jsp" location="0,0" size="0,0" />
+  <webResource name="activity_search.jsp" path="/activity_search.jsp" location="0,0" size="0,0" />
+  <webResource name="funds_search.jsp" path="/funds_search.jsp" location="0,0" size="0,0" />
+  <webResource name="approve_index.jsp" path="/approve_index.jsp" location="0,0" size="0,0" />
+</Struts2Diagram>
+

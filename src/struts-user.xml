@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<constant name="struts.devMode" value="true" />
+
+	<constant name="struts.enable.DynamicMethodInvocation"
+		value="false">
+	</constant>
+	<package name="user" namespace="/" extends="struts-default">
+		<interceptors>
+			<interceptor-stack name="myToken">
+				<interceptor-ref name="defaultStack"></interceptor-ref>
+				<interceptor-ref name="token"></interceptor-ref>
+			</interceptor-stack>
+		</interceptors>
+		<action name="register" class="com.dotink.action.UserAction"
+			method="register">
+			<interceptor-ref name="myToken"></interceptor-ref>
+			<result name="login" type="redirect">/login.jsp</result>
+			<result name="invalid.token">/login.jsp</result>
+		</action>
+		<action name="user*" class="com.dotink.action.UserAction"
+			method="{1}">
+
+			<result name="login" type="redirect">/login.jsp</result>
+			<result name="error">/login.jsp</result>
+
+			<result name="personalMessage">
+				/personalOperate/personalMessage.jsp
+			</result>
+			<result name="main">/main.jsp</result>
+			<result name="register">/register.jsp</result>
+
+		</action>
+		<action name="suite*" class="com.dotink.action.SuiteDutyAction"
+			method="{1}">
+			<result name="AddTeam">/projectTeam/AddTeam.jsp</result>
+			<result name="personalMessage">
+				/personalOperate/personalMessage.jsp
+			</result>
+		</action>
+		<action name="doc*" class="com.dotink.action.DocAction"
+			method="{1}">
+			<interceptor-ref name="defaultStack"></interceptor-ref>
+			<result name="findAll" type="redirectAction">
+				<param name="actionName">docfindAll</param>
+			</result>
+			<result name="projectdocList">
+				/doc/projectdocList.jsp
+			</result>
+			<result name="projectdocDetail">
+				/doc/projectdocDetail.jsp
+			</result>
+			<result name="projectdocNew">/doc/projectdocNew.jsp</result>
+		</action>
+
+		<action name="download" class="com.dotink.action.DocAction">
+
+			<result type="stream">
+
+				<param name="inputName">inputStream</param>
+				<param name="contentDisposition">
+					attachment;filename="${fileName}"
+				</param>
+			</result>
+
+		</action>
+
+	</package>
+
+</struts>

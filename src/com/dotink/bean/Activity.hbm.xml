@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.dotink.bean">
+
+	<class name="Activity" table="activity">
+		<id name="activity_id" >
+			<generator class="native"></generator>
+		</id>
+		<property name="activity_theme"></property>
+		<property name="activity_community"></property>
+		<property name="activity_name"></property>
+		<property name="activity_code"></property>
+	    <property name="activitydate"></property>
+		<property name="verify"></property>
+		<property name="principal"></property>
+		<property name="hkcss_inspection"></property>
+		<property name="unit"></property>
+        <property name="activity_content"></property>
+		<property name="note"></property>
+	</class>
+
+</hibernate-mapping>

@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.dotink.bean">
+
+	<class name="Member" table="member">
+		<id name="member_id" >
+			<generator class="native"></generator>
+		</id>
+		<property name="member_code"></property>
+		<property name="member_name"></property>
+		<property name="member_community"></property>
+		<property name="member_duty"></property>
+		<property name="joindate"></property>
+		<property name="gender"></property>
+		<property name="classes"></property>
+		<property name="department"></property>
+		<property name="dormitory"></property>
+		<property name="tel"></property>
+		<property name="note"></property>
+	</class>
+
+</hibernate-mapping>

@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.dotink.bean">
+
+	<class name="Duty" table="duty">
+		<id name="duty_ID" >
+			<generator class="native"></generator>
+		</id>
+		<property name="duty_name"></property>
+		<property name="duty_other"></property>
+		
+		
+		
+	
+	</class>
+
+</hibernate-mapping>

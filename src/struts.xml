@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+    "http://struts.apache.org/dtds/struts-2.1.7.dtd">
+
+<struts>
+
+	<constant name="struts.devMode" value="false" />
+
+	<constant name="struts.enable.DynamicMethodInvocation"
+		value="false">
+	</constant>
+	<package name="default" extends="struts-default" namespace="/">
+		
+     
+    <action name="member*" class="com.dotink.action.MemberAction" method="{1}" >
+         <result name="member_index">/member_index.jsp</result>
+         <result name="member_new">/member_new.jsp</result>
+         <result name="member_update">/member_update.jsp</result>
+         <result name="member_search">/member_search.jsp</result>
+         <result name="goindexmember" type="redirectAction">
+         	<param name="actionName">memberindexmember</param>
+         </result>
+         
+         <result name="goupdateuser" type="redirectAction">
+         	<param name="actionName">memberupdateUser</param>
+         </result>
+         <result name="updatesuccess" type="redirectAction">
+         	<param name="actionName">memberindexmember</param>
+         </result>
+     </action>
+     
+      <action name="community*" class="com.dotink.action.CommunityAction" method="{1}" >
+         <result name="community_index">/community_index.jsp</result>
+         <result name="community_new">/community_new.jsp</result>
+         <result name="community_search">/community_search.jsp</result>
+         <result name="community_update">/community_update.jsp</result>
+         <result name="community_examine">/community_examine.jsp</result>
+         <result name="goindexcommunity" type="redirectAction">
+         	<param name="actionName">communityindexcommunity</param>
+         </result>
+          <result name="goupdateuser" type="redirectAction">
+         	<param name="actionName">communityupdateUser</param>
+         </result>
+         <result name="goupdateduty" type="redirectAction">
+         	<param name="actionName">communityupdateDuty</param>
+         </result>
+     </action>
+     
+        <action name="activity*" class="com.dotink.action.ActivityAction" method="{1}" >
+         <result name="activity_index">/activity_index.jsp</result>
+         <result name="activity_new">/activity_new.jsp</result>
+          <result name="activity_search">/activity_search.jsp</result>
+         <result name="activity_update">/activity_update.jsp</result>
+         <result name="goindexactivity" type="redirectAction">
+         	<param name="actionName">activityindexactivity</param>
+         </result>
+     </action>
+     
+      <action name="funds*" class="com.dotink.action.FundsAction" method="{1}" >
+         <result name="funds_index">/funds_index.jsp</result>
+         <result name="funds_new">/funds_new.jsp</result>
+          <result name="funds_search">/funds_search.jsp</result>
+         <result name="funds_update">/funds_update.jsp</result>
+         <result name="goindexfunds" type="redirectAction">
+         	<param name="actionName">fundsindexfunds</param>
+         </result>
+          <result name="funds_examine">/funds_examine.jsp</result>
+     </action>
+     
+
+
+		 
+		
+
+
+
+
+		<action name="user*" class="com.dotink.action.UserAction"
+			method="{1}">
+
+			<result name="login" type="redirect">/login.jsp</result>
+			<result name="error">/login.jsp</result>
+
+			<result name="personalMessage">
+				/personalOperate/personalMessage.jsp
+			</result>
+			<result name="main">/main.jsp</result>
+			<result name="register">/register.jsp</result>
+			 <result name="goupdateuser" type="redirectAction">
+         	<param name="actionName">userupdateUser</param>
+         </result>
+
+		</action>
+		
+
+
+		<!--user right end -->
+
+
+	</package>
+
+</struts>
+
+

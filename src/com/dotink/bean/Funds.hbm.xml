@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.dotink.bean">
+
+	<class name="Funds" table="funds">
+		<id name="funds_id" >
+			<generator class="native"></generator>
+		</id>
+		<property name="surplus_money"></property>
+		<property name="funds_money"></property>
+		<property name="funds_reason"></property>
+		<property name="funds_people"></property>
+		<property name="funds_date"></property>
+	    <property name="examine_program"></property>
+	    <property name="examine_people"></property>
+	    <property name="examine_date"></property>
+		<property name="note"></property>
+		<property name="examine_note"></property>
+		<property name="funds_community"></property>
+	</class>
+
+</hibernate-mapping>

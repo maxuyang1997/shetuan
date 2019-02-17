@@ -1,0 +1,46 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+<session-factory>
+	<!-- Database connection settings -->
+	<property name="connection.driver_class">
+		com.mysql.jdbc.Driver
+	</property>
+	<property name="connection.url">
+		jdbc:mysql://localhost:3306/project
+	</property>
+	<property name="connection.username">root</property>
+	<property name="connection.password">root</property>
+
+	<!-- SQL dialect -->
+	<property name="dialect">
+		org.hibernate.dialect.MySQLDialect
+	</property>
+
+	<!-- Enable Hibernate's automatic session context management -->
+	<property name="current_session_context_class">thread</property>
+
+	<property name="show_sql">true</property>
+	<property name="format_sql">true</property>
+	<property name="hbm2ddl.auto">update</property>
+	<property name="cache.use_second_level_cache">true</property>
+	<property name="cache.provider_class">
+		org.hibernate.cache.EhCacheProvider
+	</property>
+	<property name="generate_statistics">true</property>
+	<property name="cache.use_structured_entries">true</property>
+
+
+	<property name="cache.use_query_cache">true</property>
+
+	<mapping resource="com/dotink/bean/Duty.hbm.xml" />
+	<mapping resource="com/dotink/bean/User.hbm.xml" />
+	<mapping resource="com/dotink/bean/Activity.hbm.xml" />
+	<mapping resource="com/dotink/bean/Community.hbm.xml" />
+	<mapping resource="com/dotink/bean/Funds.hbm.xml" />
+	<mapping resource="com/dotink/bean/Member.hbm.xml" />
+
+</session-factory>
+</hibernate-configuration>
